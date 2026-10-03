@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dr. Nome Sobrenome | Médico Perito Judicial e Assistente Técnico</title>
+  <meta name="description" content="Perícias médicas judiciais e assistência técnica em matéria previdenciária, trabalhista, cível e securitária. Rigor técnico-científico, fundamentação baseada em evidências e cumprimento estrito de prazos processuais.">
+  <meta name="theme-color" content="#0b1a30">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Dr. Nome Sobrenome | Médico Perito Judicial">
+  <meta property="og:description" content="Perícia médica judicial e assistência técnica com rigor metodológico e imparcialidade.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%230b1a30'/><path d='M32 14v36M14 32h36' stroke='%23c3cad4' stroke-width='6' stroke-linecap='round'/></svg>">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy:  { 950: '#07111f', 900: '#0b1a30', 800: '#122544', 700: '#1b3358', 600: '#2a4670' },
+            steel: { 50: '#f4f6f8', 100: '#e8ecf0', 200: '#d3d9e0', 300: '#b4bdc8', 400: '#8e99a7', 500: '#6b7685' },
+            graphite: { 700: '#3a3f47', 800: '#2a2e34', 900: '#1c1f23' }
+          },
+          fontFamily: {
+            sans:  ['Inter', 'system-ui', 'sans-serif'],
+            serif: ['"Source Serif 4"', 'Georgia', 'serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .steel-line { background: linear-gradient(90deg, transparent, #b4bdc8 20%, #e8ecf0 50%, #b4bdc8 80%, transparent); height: 1px; }
+    .steel-text { background: linear-gradient(180deg, #f4f6f8 0%, #b4bdc8 60%, #8e99a7 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .hero-grid { background-image: linear-gradient(rgba(180,189,200,.07) 1px, transparent 1px), linear-gradient(90deg, rgba(180,189,200,.07) 1px, transparent 1px); background-size: 48px 48px; }
+    .reveal { opacity: 0; transform: translateY(16px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.is-visible { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } }
+    .field { width: 100%; border-radius: .5rem; border: 1px solid #d3d9e0; background: #fff; padding: .75rem 1rem; font-size: .95rem; color: #1c1f23; transition: border-color .2s, box-shadow .2s; }
+    .field:focus { outline: none; border-color: #2a4670; box-shadow: 0 0 0 3px rgba(42,70,112,.15); }
+    .field[aria-invalid="true"] { border-color: #b91c1c; }
+  </style>
+</head>
+<body class="bg-steel-50 font-sans text-graphite-800 antialiased">
+
+  <a href="#conteudo" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded focus:bg-white focus:px-4 focus:py-2 focus:text-navy-900">Ir para o conteúdo</a>
+
+  <!-- CABEÇALHO -->
+  <header id="topo" class="fixed inset-x-0 top-0 z-50 transition-all duration-300">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+      <a href="#inicio" class="flex items-center gap-3" aria-label="Página inicial">
+        <span class="flex h-10 w-10 items-center justify-center rounded-md border border-steel-300/40 bg-navy-800">
+          <svg class="h-5 w-5 text-steel-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3v18M5 7h14M7 7l-3 7a3 3 0 0 0 6 0L7 7Zm10 0-3 7a3 3 0 0 0 6 0l-3-7Z" stroke-linejoin="round"/></svg>
+        </span>
+        <span class="leading-tight">
+          <span class="block font-serif text-lg font-semibold text-white">Dr. Nome Sobrenome</span>
+          <span class="block text-[11px] uppercase tracking-[.18em] text-steel-300">Perícia Médica Judicial</span>
+        </span>
+      </a>
+
+      <nav class="hidden items-center gap-8 lg:flex" aria-label="Navegação principal">
+        <a href="#atuacao" class="nav-link text-sm font-medium text-steel-200 hover:text-white">Áreas de Atuação</a>
+        <a href="#metodologia" class="nav-link text-sm font-medium text-steel-200 hover:text-white">Metodologia</a>
+        <a href="#perfil" class="nav-link text-sm font-medium text-steel-200 hover:text-white">Perfil Técnico</a>
+        <a href="#contato" class="rounded-md border border-steel-300/50 bg-white/5 px-4 py-2 text-sm font-semibold text-white hover:bg-white/10">Contato</a>
+      </nav>
+
+      <button id="menuBtn" class="rounded-md p-2 text-steel-100 lg:hidden" aria-label="Abrir menu" aria-expanded="false" aria-controls="menuMobile">
+        <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+    <nav id="menuMobile" class="hidden border-t border-white/10 bg-navy-950/95 backdrop-blur lg:hidden" aria-label="Navegação móvel">
+      <div class="flex flex-col px-4 py-4 sm:px-6">
+        <a href="#atuacao" class="py-3 text-steel-100">Áreas de Atuação</a>
+        <a href="#metodologia" class="py-3 text-steel-100">Metodologia</a>
+        <a href="#perfil" class="py-3 text-steel-100">Perfil Técnico</a>
+        <a href="#contato" class="py-3 font-semibold text-white">Contato</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+
+    <!-- HERO -->
+    <section id="inicio" class="relative overflow-hidden bg-navy-950 pb-24 pt-36 sm:pt-44 lg:pb-32">
+      <div class="hero-grid absolute inset-0" aria-hidden="true"></div>
+      <div class="absolute -right-40 -top-40 h-[32rem] w-[32rem] rounded-full bg-navy-700/40 blur-3xl" aria-hidden="true"></div>
+      <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="grid items-center gap-16 lg:grid-cols-12">
+          <div class="lg:col-span-7">
+            <p class="mb-6 inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-[.22em] text-steel-300">
+              <span class="h-px w-10 bg-steel-400"></span> Perito Judicial · Assistente Técnico
+            </p>
+            <h1 class="font-serif text-4xl font-semibold leading-[1.1] text-white sm:text-5xl lg:text-6xl">
+              Prova técnica médica com <span class="steel-text">rigor científico</span> e imparcialidade.
+            </h1>
+            <p class="mt-6 max-w-2xl text-lg leading-relaxed text-steel-300">
+              Laudos e pareceres fundamentados em evidências, metodologia pericial padronizada e estrito cumprimento dos prazos processuais — a serviço de magistrados, advogados, seguradoras e partes.
+            </p>
+            <div class="mt-10 flex flex-col gap-4 sm:flex-row">
+              <a href="#contato" class="inline-flex items-center justify-center gap-2 rounded-md bg-steel-100 px-6 py-3.5 text-sm font-semibold text-navy-900 shadow-lg shadow-black/20 transition hover:bg-white">
+                Solicitar Assistência Técnica
+                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+              <a href="#atuacao" class="inline-flex items-center justify-center rounded-md border border-steel-400/50 px-6 py-3.5 text-sm font-semibold text-steel-100 transition hover:border-steel-200 hover:bg-white/5">
+                Ver Áreas de Atuação
+              </a>
+            </div>
+          </div>
+
+          <aside class="lg:col-span-5" aria-label="Compromissos">
+            <div class="rounded-xl border border-steel-300/20 bg-gradient-to-b from-navy-800/80 to-navy-900/80 p-8 shadow-2xl backdrop-blur">
+              <div class="steel-line mb-6"></div>
+              <dl class="space-y-6">
+                <div class="flex gap-4">
+                  <dt class="font-serif text-3xl font-semibold text-steel-200">01</dt>
+                  <dd><p class="font-semibold text-white">Fundamentação científica</p><p class="text-sm text-steel-400">Literatura médica atualizada, diretrizes e tabelas oficiais de referência.</p></dd>
+                </div>
+                <div class="flex gap-4">
+                  <dt class="font-serif text-3xl font-semibold text-steel-200">02</dt>
+                  <dd><p class="font-semibold text-white">Imparcialidade técnica</p><p class="text-sm text-steel-400">Conclusões vinculadas exclusivamente aos achados clínicos e documentais.</p></dd>
+                </div>
+                <div class="flex gap-4">
+                  <dt class="font-serif text-3xl font-semibold text-steel-200">03</dt>
+                  <dd><p class="font-semibold text-white">Pontualidade processual</p><p class="text-sm text-steel-400">Entrega do laudo dentro do prazo fixado pelo juízo.</p></dd>
+                </div>
+              </dl>
+              <div class="steel-line mt-6"></div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAIXA DE PÚBLICO -->
+    <section class="border-b border-steel-200 bg-white" aria-label="Público atendido">
+      <div class="mx-auto grid max-w-7xl grid-cols-2 gap-6 px-4 py-8 text-center sm:px-6 md:grid-cols-4 lg:px-8">
+        <p class="text-sm font-medium text-steel-500"><span class="block font-serif text-lg font-semibold text-navy-900">Magistratura</span>Nomeações judiciais</p>
+        <p class="text-sm font-medium text-steel-500"><span class="block font-serif text-lg font-semibold text-navy-900">Advocacia</span>Assistência às partes</p>
+        <p class="text-sm font-medium text-steel-500"><span class="block font-serif text-lg font-semibold text-navy-900">Seguradoras</span>Regulação de sinistros</p>
+        <p class="text-sm font-medium text-steel-500"><span class="block font-serif text-lg font-semibold text-navy-900">Empresas</span>Saúde ocupacional</p>
+      </div>
+    </section>
+
+    <!-- ÁREAS DE ATUAÇÃO -->
+    <section id="atuacao" class="scroll-mt-20 py-24 lg:py-32">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <header class="reveal mx-auto max-w-3xl text-center">
+          <p class="text-xs font-semibold uppercase tracking-[.22em] text-navy-600">Áreas de Atuação Pericial</p>
+          <h2 class="mt-4 font-serif text-3xl font-semibold text-navy-900 sm:text-4xl">Competência técnica nas principais esferas do contencioso médico-legal</h2>
+          <div class="steel-line mx-auto mt-8 max-w-xs"></div>
+        </header>
+
+        <div class="mt-16 grid gap-6 md:grid-cols-2">
+          <!-- Card 1 -->
+          <article class="reveal group rounded-xl border border-steel-200 bg-white p-8 shadow-sm transition hover:-translate-y-1 hover:border-steel-300 hover:shadow-xl">
+            <div class="flex items-start gap-5">
+              <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-navy-900 text-steel-200">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 21h18M5 21V10l7-5 7 5v11M9 21v-6h6v6" stroke-linejoin="round"/></svg>
+              </span>
+              <div>
+                <h3 class="font-serif text-xl font-semibold text-navy-900">Perícias Médicas Previdenciárias</h3>
+                <p class="mt-2 text-sm text-steel-500">Justiça Federal · Juizados Especiais Federais · Justiça Estadual (competência delegada)</p>
+              </div>
+            </div>
+            <ul class="mt-6 space-y-3 border-t border-steel-100 pt-6 text-[15px] text-graphite-700">
+              <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-steel-400"></span>Avaliação da capacidade laboral (total/parcial, temporária/permanente)</li>
+              <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-steel-400"></span>Benefícios por incapacidade, auxílio-acidente e BPC/LOAS</li>
+              <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-steel-400"></span>Fixação de DII/DID e estabelecimento de nexo causal e concausal</li>
+            </ul>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="reveal group rounded-xl border border-steel-200 bg-white p-8 shadow-sm transition hover:-translate-y-1 hover:border-steel-300 hover:shadow-xl">
+            <div class="flex items-start gap-5">
+              <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-navy-900 text-steel-200">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 20h16M6 20V9l6-3 6 3v11M12 6V3M9 13h6M9 16h6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              <div>
+                <h3 class="font-serif text-xl font-semibold text-navy-900">Perícias Trabalhistas e Ergonômicas</h3>
+                <p class="mt-2 text-sm text-steel-500">Justiça do Trabalho · Ações acidentárias</p>
+              </div>
+            </div>
+            <ul class="mt-6 space-y-3 border-t border-steel-100 pt-6 text-[15px] text-graphite-700">
+              <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-steel-400"></span>Acidentes de trabalho e doenças ocupacionais</li>
+              <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-steel-400"></span>LER/DORT e análise ergonômica do posto de trabalho</li>
+              <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-steel-400"></span>Riscos ocupacionais, insalubridade e periculosidade</li>
+            </ul>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="reveal group rounded-xl border border-steel-200 bg-white p-8 shadow-sm transition hover:-translate-y-1 hover:border-steel-300 hover:shadow-xl">
+            <div class="flex items-start gap-5">
+              <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-navy-900 text-steel-200">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 3 4 6v6c0 4.5 3.4 8.3 8 9 4.6-.7 8-4.5 8-9V6l-8-3Z" stroke-linejoin="round"/><path d="m9 12 2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              <div>
+                <h3 class="font-serif text-xl font-semibold text-navy-900">Perícias Cíveis e Securitárias</h3>
+                <p class="mt-2 text-sm text-steel-500">Justiça Estadual · Regulação de sinistros</p>
+              </div>
+            </div>
+            <ul class="mt-6 space-y-3 border-t border-steel-100 pt-6 text-[15px] text-graphite-700">
+              <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-steel-400"></span>Quantificação e valoração do dano corporal</li>
+              <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-steel-400"></span>Sinistros e seguros privados (vida, acidentes pessoais, invalidez)</li>
+              <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-steel-400"></span>DPVAT/SPVAT e responsabilidade civil</li>
+            </ul>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="reveal group relative overflow-hidden rounded-xl border border-navy-700 bg-navy-900 p-8 text-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl">
+            <div class="steel-line absolute inset-x-0 top-0"></div>
+            <div class="flex items-start gap-5">
+              <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg border border-steel-300/30 bg-navy-800 text-steel-200">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M8 3h8l4 4v14H4V3h4Z" stroke-linejoin="round"/><path d="M8 11h8M8 15h8M8 7h4" stroke-linecap="round"/></svg>
+              </span>
+              <div>
+                <h3 class="font-serif text-xl font-semibold">Assistência Técnica Judicial</h3>
+                <p class="mt-2 text-sm text-steel-300">Representação técnica das partes (art. 465 do CPC)</p>
+              </div>
+            </div>
+            <ul class="mt-6 space-y-3 border-t border-white/10 pt-6 text-[15px] text-steel-200">
+              <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-steel-300"></span>Elaboração de quesitos estratégicos e complementares</li>
+              <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-steel-300"></span>Acompanhamento presencial do ato pericial</li>
+              <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-steel-300"></span>Pareceres técnicos concordantes ou divergentes e impugnação de laudos</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- METODOLOGIA -->
+    <section id="metodologia" class="scroll-mt-20 bg-white py-24 lg:py-32">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="grid gap-16 lg:grid-cols-12">
+          <header class="reveal lg:col-span-4">
+            <p class="text-xs font-semibold uppercase tracking-[.22em] text-navy-600">Metodologia de Trabalho</p>
+            <h2 class="mt-4 font-serif text-3xl font-semibold text-navy-900 sm:text-4xl">Protocolo pericial estruturado</h2>
+            <p class="mt-6 leading-relaxed text-graphite-700">Cada etapa é documentada e rastreável, assegurando reprodutibilidade das conclusões, transparência perante o juízo e pleno respeito ao contraditório.</p>
+            <div class="mt-8 rounded-lg border-l-2 border-steel-400 bg-steel-50 p-5 text-sm text-graphite-700">
+              Conformidade com o CPC (arts. 464 a 480), Código de Ética Médica e resoluções do CFM aplicáveis à atividade pericial.
+            </div>
+          </header>
+
+          <div class="relative lg:col-span-8 lg:pl-10">
+          <div class="absolute bottom-4 left-6 top-4 w-px bg-gradient-to-b from-steel-300 via-steel-200 to-transparent lg:left-16" aria-hidden="true"></div>
+          <ol class="relative space-y-10">
+            <li class="reveal relative flex gap-6">
+              <span class="relative z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-steel-300 bg-white font-serif text-lg font-semibold text-navy-900 shadow-sm">1</span>
+              <div class="pt-1">
+                <h3 class="font-serif text-xl font-semibold text-navy-900">Análise prévia minuciosa dos autos</h3>
+                <p class="mt-2 leading-relaxed text-graphite-700">Estudo integral do processo: petições, quesitos das partes e do juízo, prontuários, exames complementares, CAT, PPP/LTCAT e histórico laboral, com cronologia clínica consolidada.</p>
+              </div>
+            </li>
+            <li class="reveal relative flex gap-6">
+              <span class="relative z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-steel-300 bg-white font-serif text-lg font-semibold text-navy-900 shadow-sm">2</span>
+              <div class="pt-1">
+                <h3 class="font-serif text-xl font-semibold text-navy-900">Exame clínico pericial padronizado</h3>
+                <p class="mt-2 leading-relaxed text-graphite-700">Anamnese dirigida, exame físico segmentar e manobras semiológicas específicas, com registro sistemático dos achados e aplicação de escalas funcionais validadas.</p>
+              </div>
+            </li>
+            <li class="reveal relative flex gap-6">
+              <span class="relative z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-steel-300 bg-white font-serif text-lg font-semibold text-navy-900 shadow-sm">3</span>
+              <div class="pt-1">
+                <h3 class="font-serif text-xl font-semibold text-navy-900">Correlação anátomo-funcional</h3>
+                <p class="mt-2 leading-relaxed text-graphite-700">Integração entre achados clínicos, exames de imagem e exigências da atividade, com análise de nexo pelos critérios técnicos consagrados e valoração por tabelas de referência.</p>
+              </div>
+            </li>
+            <li class="reveal relative flex gap-6">
+              <span class="relative z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-navy-700 bg-navy-900 font-serif text-lg font-semibold text-steel-100 shadow-sm">4</span>
+              <div class="pt-1">
+                <h3 class="font-serif text-xl font-semibold text-navy-900">Entrega tempestiva do laudo</h3>
+                <p class="mt-2 leading-relaxed text-graphite-700">Laudo claro, objetivo e integralmente fundamentado, com resposta individualizada a todos os quesitos, protocolado dentro do prazo e disponível para esclarecimentos complementares.</p>
+              </div>
+            </li>
+          </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PERFIL TÉCNICO -->
+    <section id="perfil" class="scroll-mt-20 bg-navy-950 py-24 text-white lg:py-32">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <header class="reveal max-w-3xl">
+          <p class="text-xs font-semibold uppercase tracking-[.22em] text-steel-400">Perfil Técnico e Qualificações</p>
+          <h2 class="mt-4 font-serif text-3xl font-semibold sm:text-4xl">Formação sólida a serviço da prova pericial</h2>
+        </header>
+
+        <div class="mt-14 grid gap-6 lg:grid-cols-3">
+          <div class="reveal rounded-xl border border-steel-300/15 bg-navy-900 p-8 lg:col-span-1">
+            <div class="flex h-24 w-24 items-center justify-center rounded-full border border-steel-300/30 bg-navy-800 font-serif text-3xl text-steel-200" aria-hidden="true">NS</div>
+            <h3 class="mt-6 font-serif text-2xl font-semibold">Dr. Nome Sobrenome</h3>
+            <p class="mt-1 text-steel-400">Médico Perito Judicial e Assistente Técnico</p>
+            <div class="steel-line my-6"></div>
+            <dl class="space-y-4 text-sm">
+              <div class="flex justify-between gap-4"><dt class="text-steel-400">CRM</dt><dd class="font-semibold text-steel-100">00000/UF</dd></div>
+              <div class="flex justify-between gap-4"><dt class="text-steel-400">RQE</dt><dd class="font-semibold text-steel-100">00000</dd></div>
+              <div class="flex justify-between gap-4"><dt class="text-steel-400">Cadastro de peritos</dt><dd class="text-right font-semibold text-steel-100">TJ · TRT · TRF</dd></div>
+            </dl>
+          </div>
+
+          <div class="reveal rounded-xl border border-steel-300/15 bg-navy-900 p-8">
+            <h3 class="flex items-center gap-3 font-serif text-xl font-semibold">
+              <svg class="h-5 w-5 text-steel-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m2 9 10-5 10 5-10 5L2 9Z" stroke-linejoin="round"/><path d="M6 11v5c3 2 9 2 12 0v-5" stroke-linejoin="round"/></svg>
+              Credenciais Acadêmicas
+            </h3>
+            <ul class="mt-6 space-y-5 text-sm">
+              <li><p class="font-semibold text-steel-100">Graduação em Medicina</p><p class="text-steel-400">Instituição · Ano</p></li>
+              <li><p class="font-semibold text-steel-100">Residência / Título de Especialista</p><p class="text-steel-400">Especialidade · Instituição</p></li>
+              <li><p class="font-semibold text-steel-100">Pós-graduação em Perícias Médicas</p><p class="text-steel-400">Instituição · Ano</p></li>
+              <li><p class="font-semibold text-steel-100">Medicina do Trabalho / Medicina Legal</p><p class="text-steel-400">Título ou pós-graduação · Ano</p></li>
+            </ul>
+          </div>
+
+          <div class="reveal rounded-xl border border-steel-300/15 bg-navy-900 p-8">
+            <h3 class="flex items-center gap-3 font-serif text-xl font-semibold">
+              <svg class="h-5 w-5 text-steel-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 21s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z" stroke-linejoin="round"/><circle cx="12" cy="9" r="2.5"/></svg>
+              Comarcas e Regiões de Atendimento
+            </h3>
+            <ul class="mt-6 flex flex-wrap gap-2 text-sm">
+              <li class="rounded-full border border-steel-300/25 px-3 py-1.5 text-steel-200">Comarca da Capital</li>
+              <li class="rounded-full border border-steel-300/25 px-3 py-1.5 text-steel-200">Região Metropolitana</li>
+              <li class="rounded-full border border-steel-300/25 px-3 py-1.5 text-steel-200">Comarca A</li>
+              <li class="rounded-full border border-steel-300/25 px-3 py-1.5 text-steel-200">Comarca B</li>
+              <li class="rounded-full border border-steel-300/25 px-3 py-1.5 text-steel-200">TRT da __ª Região</li>
+              <li class="rounded-full border border-steel-300/25 px-3 py-1.5 text-steel-200">Seção Judiciária de __</li>
+            </ul>
+            <p class="mt-6 text-sm leading-relaxed text-steel-400">Atendimento em outras localidades mediante consulta prévia de disponibilidade e deslocamento.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" class="scroll-mt-20 py-24 lg:py-32">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="grid gap-12 lg:grid-cols-12">
+          <header class="reveal lg:col-span-5">
+            <p class="text-xs font-semibold uppercase tracking-[.22em] text-navy-600">Contato Institucional</p>
+            <h2 class="mt-4 font-serif text-3xl font-semibold text-navy-900 sm:text-4xl">Solicitação de perícia ou assistência técnica</h2>
+            <p class="mt-6 leading-relaxed text-graphite-700">Informe o número dos autos e o objeto da demanda para triagem técnica, análise de conflito de interesses e verificação de disponibilidade de agenda.</p>
+
+            <a id="whatsBtn" href="#" target="_blank" rel="noopener" class="mt-8 inline-flex w-full items-center justify-center gap-3 rounded-md bg-[#1f7a4d] px-6 py-4 font-semibold text-white shadow-md transition hover:bg-[#186640] sm:w-auto">
+              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2Zm5.8 14.03c-.24.68-1.42 1.31-1.96 1.36-.5.05-.98.24-3.3-.69-2.8-1.1-4.56-3.97-4.7-4.15-.13-.18-1.12-1.49-1.12-2.85 0-1.35.71-2.02.96-2.29.25-.28.55-.35.73-.35l.52.01c.17 0 .4-.06.62.48.24.56.8 1.93.87 2.07.07.14.12.3.02.48-.09.18-.14.3-.28.46-.14.16-.29.36-.42.48-.14.14-.28.29-.12.57.16.28.72 1.19 1.55 1.93 1.06.95 1.96 1.24 2.24 1.38.28.14.44.12.6-.07.17-.19.7-.82.89-1.1.18-.28.37-.23.62-.14.25.09 1.6.76 1.88.9.27.13.46.2.53.31.07.12.07.66-.17 1.33Z"/></svg>
+              Triagem pericial via WhatsApp
+            </a>
+
+            <dl class="mt-10 space-y-4 border-t border-steel-200 pt-8 text-sm">
+              <div class="flex gap-4"><dt class="w-24 shrink-0 text-steel-500">E-mail</dt><dd><a id="emailLink" class="font-medium text-navy-800 hover:underline" href="#"></a></dd></div>
+              <div class="flex gap-4"><dt class="w-24 shrink-0 text-steel-500">Telefone</dt><dd id="phoneText" class="font-medium text-navy-800"></dd></div>
+              <div class="flex gap-4"><dt class="w-24 shrink-0 text-steel-500">Horário</dt><dd class="font-medium text-navy-800">Segunda a sexta, 8h às 18h</dd></div>
+            </dl>
+          </header>
+
+          <div class="reveal lg:col-span-7">
+            <form id="contatoForm" class="rounded-xl border border-steel-200 bg-white p-6 shadow-sm sm:p-10" novalidate>
+              <div class="grid gap-6 sm:grid-cols-2">
+                <div class="sm:col-span-2">
+                  <label for="nome" class="mb-2 block text-sm font-semibold text-navy-900">Nome / Vara / Escritório <span class="text-red-700">*</span></label>
+                  <input id="nome" name="nome" type="text" class="field" autocomplete="organization" required placeholder="Ex.: 2ª Vara do Trabalho de ... / Escritório ...">
+                </div>
+                <div class="sm:col-span-2">
+                  <label for="autos" class="mb-2 block text-sm font-semibold text-navy-900">Número dos Autos / Assunto <span class="text-red-700">*</span></label>
+                  <input id="autos" name="autos" type="text" class="field" required placeholder="0000000-00.0000.0.00.0000 — Objeto da perícia">
+                </div>
+                <div>
+                  <label for="email" class="mb-2 block text-sm font-semibold text-navy-900">E-mail <span class="text-red-700">*</span></label>
+                  <input id="email" name="email" type="email" class="field" autocomplete="email" required placeholder="nome@dominio.com.br">
+                </div>
+                <div>
+                  <label for="telefone" class="mb-2 block text-sm font-semibold text-navy-900">Telefone / WhatsApp</label>
+                  <input id="telefone" name="telefone" type="tel" class="field" autocomplete="tel" inputmode="tel" placeholder="(00) 00000-0000">
+                </div>
+                <div class="sm:col-span-2">
+                  <label for="mensagem" class="mb-2 block text-sm font-semibold text-navy-900">Mensagem <span class="text-red-700">*</span></label>
+                  <textarea id="mensagem" name="mensagem" rows="5" class="field resize-y" required placeholder="Descreva a natureza da demanda, prazos processuais relevantes e eventual data designada para a perícia."></textarea>
+                </div>
+              </div>
+
+              <label class="mt-6 flex items-start gap-3 text-sm text-graphite-700">
+                <input id="lgpd" type="checkbox" required class="mt-1 h-4 w-4 rounded border-steel-300 text-navy-800 focus:ring-navy-600">
+                <span>Autorizo o tratamento dos dados informados exclusivamente para resposta a esta solicitação, nos termos da LGPD (Lei 13.709/2018).</span>
+              </label>
+
+              <p id="formMsg" class="mt-4 hidden rounded-md px-4 py-3 text-sm" role="status" aria-live="polite"></p>
+
+              <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+                <button type="submit" data-via="email" class="inline-flex flex-1 items-center justify-center rounded-md bg-navy-900 px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-navy-800">Enviar por e-mail</button>
+                <button type="submit" data-via="whatsapp" class="inline-flex flex-1 items-center justify-center rounded-md border border-steel-300 px-6 py-3.5 text-sm font-semibold text-navy-900 transition hover:bg-steel-50">Enviar via WhatsApp</button>
+              </div>
+              <p class="mt-4 text-xs text-steel-500">Não envie documentos sigilosos ou dados de saúde por este formulário. Os autos serão solicitados por canal adequado após a triagem.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer class="bg-graphite-900 text-steel-400">
+    <div class="steel-line opacity-40"></div>
+    <div class="mx-auto flex max-w-7xl flex-col gap-4 px-4 py-10 text-sm sm:px-6 md:flex-row md:items-center md:justify-between lg:px-8">
+      <p><span class="font-serif text-steel-200">Dr. Nome Sobrenome</span> · CRM 00000/UF · RQE 00000</p>
+      <p>Conteúdo informativo, em conformidade com a Resolução CFM nº 2.336/2023 (publicidade médica).</p>
+      <p>&copy; <span id="ano"></span></p>
+    </div>
+  </footer>
+
+  <script>
+    // ===== CONFIGURAÇÃO — edite estes dados =====
+    const CONFIG = {
+      nome: 'Dr. Nome Sobrenome',
+      whatsapp: '5500000000000',              // DDI + DDD + número, só dígitos
+      telefoneExibicao: '(00) 00000-0000',
+      email: 'contato@seudominio.com.br',
+      mensagemWhatsApp: 'Prezado Dr., gostaria de solicitar triagem pericial.\n\n• Tipo: (Perícia judicial / Assistência técnica)\n• Área: (Previdenciária / Trabalhista / Cível / Securitária)\n• Nº dos autos:\n• Vara/Comarca:\n• Prazo ou data da perícia:'
+    };
+
+    const waUrl = (text) => `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(text)}`;
+
+    // Contatos dinâmicos
+    document.getElementById('whatsBtn').href = waUrl(CONFIG.mensagemWhatsApp);
+    const emailLink = document.getElementById('emailLink');
+    emailLink.href = `mailto:${CONFIG.email}`;
+    emailLink.textContent = CONFIG.email;
+    document.getElementById('phoneText').textContent = CONFIG.telefoneExibicao;
+    document.getElementById('ano').textContent = new Date().getFullYear();
+
+    // Cabeçalho ao rolar
+    const topo = document.getElementById('topo');
+    const onScroll = () => {
+      const s = window.scrollY > 24;
+      topo.classList.toggle('bg-navy-950/95', s);
+      topo.classList.toggle('backdrop-blur', s);
+      topo.classList.toggle('shadow-lg', s);
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    // Menu móvel
+    const menuBtn = document.getElementById('menuBtn');
+    const menu = document.getElementById('menuMobile');
+    const toggleMenu = (open) => {
+      menu.classList.toggle('hidden', !open);
+      menuBtn.setAttribute('aria-expanded', String(open));
+      if (open) topo.classList.add('bg-navy-950/95');
+      else onScroll();
+    };
+    menuBtn.addEventListener('click', () => toggleMenu(menu.classList.contains('hidden')));
+    menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => toggleMenu(false)));
+
+    // Animação de entrada
+    const revealEls = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); } });
+      }, { threshold: 0.12 });
+      revealEls.forEach(el => io.observe(el));
+    } else {
+      revealEls.forEach(el => el.classList.add('is-visible'));
+    }
+
+    // Formulário
+    const form = document.getElementById('contatoForm');
+    const msg = document.getElementById('formMsg');
+    const showMsg = (text, ok) => {
+      msg.textContent = text;
+      msg.className = `mt-4 rounded-md px-4 py-3 text-sm ${ok ? 'bg-emerald-50 text-emerald-800' : 'bg-red-50 text-red-800'}`;
+    };
+
+    form.addEventListener('submit', (ev) => {
+      ev.preventDefault();
+      const via = ev.submitter?.dataset.via || 'email';
+      const fields = ['nome', 'autos', 'email', 'mensagem'].map(id => document.getElementById(id));
+      let valid = true;
+      fields.forEach(f => {
+        const ok = f.checkValidity() && f.value.trim() !== '';
+        f.setAttribute('aria-invalid', String(!ok));
+        if (!ok) valid = false;
+      });
+      if (!valid) { showMsg('Preencha corretamente os campos obrigatórios.', false); fields.find(f => f.getAttribute('aria-invalid') === 'true').focus(); return; }
+      if (!document.getElementById('lgpd').checked) { showMsg('É necessário autorizar o tratamento dos dados (LGPD).', false); return; }
+
+      const d = Object.fromEntries(new FormData(form));
+      const corpo =
+        `Solicitante: ${d.nome}\nAutos/Assunto: ${d.autos}\nE-mail: ${d.email}\nTelefone/WhatsApp: ${d.telefone || '—'}\n\nMensagem:\n${d.mensagem}`;
+
+      if (via === 'whatsapp') {
+        window.open(waUrl(`Solicitação de triagem pericial\n\n${corpo}`), '_blank', 'noopener');
+      } else {
+        const assunto = `Solicitação pericial — ${d.autos}`;
+        window.location.href = `mailto:${CONFIG.email}?subject=${encodeURIComponent(assunto)}&body=${encodeURIComponent(corpo)}`;
+      }
+      showMsg('Solicitação preparada. Conclua o envio no aplicativo aberto.', true);
+    });
+
+    form.querySelectorAll('.field').forEach(f => f.addEventListener('input', () => f.removeAttribute('aria-invalid')));
+  </script>
+</body>
+</html>
