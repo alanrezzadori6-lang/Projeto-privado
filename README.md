@@ -18,7 +18,7 @@ Abra `index.html` e ajuste:
 | O quê | Onde |
 |---|---|
 | WhatsApp, e-mail, telefone, mensagem inicial de triagem | objeto `CONFIG` no `<script>` no fim do arquivo |
-| Nome, CRM, RQE | busque por `Nome Sobrenome`, `00000/UF`, `RQE` |
+| Nome, CRM | busque por `Álan Rezzadori`, `64436` |
 | Credenciais acadêmicas | seção `id="perfil"` → bloco "Credenciais Acadêmicas" |
 | Comarcas / regiões | seção `id="perfil"` → bloco "Comarcas e Regiões de Atendimento" |
 | Título e descrição (SEO) | `<title>` e `<meta name="description">` no `<head>` |
@@ -75,5 +75,5 @@ Para receber envios diretamente na caixa de entrada sem depender do cliente de e
 
 ## 5. Conformidade
 
-- Publicidade médica: revise o conteúdo à luz da **Resolução CFM nº 2.336/2023** (sem promessas de resultado, com CRM e RQE visíveis).
+- Publicidade médica: revise o conteúdo à luz da **Resolução CFM nº 2.336/2023** (sem promessas de resultado, com CRM visível; RQE apenas se houver especialidade registrada).
 - LGPD: o formulário inclui consentimento explícito e alerta contra envio de dados sensíveis.
