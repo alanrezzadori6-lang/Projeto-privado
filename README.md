@@ -58,7 +58,7 @@ python3 -m http.server 8000
 
 ### Domínio próprio (opcional)
 
-1. *Settings → Pages → Custom domain* → informe `www.seudominio.com.br` → *Save* (o GitHub cria o arquivo `CNAME`).
+1. *Settings → Pages → Custom domain* → informe `www.arpericiasmedicas.com` → *Save* (o GitHub cria o arquivo `CNAME`).
 2. No provedor de DNS (ex.: Registro.br):
    - `www` → registro **CNAME** apontando para `SEU-USUARIO.github.io`
    - Domínio raiz (opcional) → registros **A**: `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
